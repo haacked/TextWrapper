@@ -59,11 +59,20 @@ namespace TextWrapper
                 char c = text[position];
                 if (c != ' ')
                 {
-                    while (c != ' ' && position > -1)
+                    while (c != ' ')
                     {
-                        position--;
-                        c = text[position];
+                        if (position > 0)
+                        {
+                            position--;
+                            c = text[position];
+                        }
+                        else
+                        {
+                            position = length - 1;
+                            break;
+                        }
                     }
+
                     position++; // Keep the last space
                 }
                 yield return text.Substring(0, position);
