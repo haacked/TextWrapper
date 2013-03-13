@@ -42,7 +42,7 @@ hymenokichlepikossyphophattoperisteralektryonoptekephalliokigklopeleiolagoiosira
 iobaphetraganopterygon")]
             public void ProperlyWrapsLongWords(string text, string expected)
             {
-                Assert.Equal(text.Wrap(), expected);
+                Assert.Equal(expected, text.Wrap());
             }
         }
 
