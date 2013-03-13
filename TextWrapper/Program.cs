@@ -59,7 +59,7 @@ namespace TextWrapper
                 char c = text[position];
                 if (c != ' ')
                 {
-                    while (c != ' ' && position > -1)
+                    while (c != ' ' && position > 0)
                     {
                         position--;
                         c = text[position];
