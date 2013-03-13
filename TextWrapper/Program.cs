@@ -30,7 +30,7 @@ namespace TextWrapper
 
             foreach (var file in files)
             {
-                File.WriteAllText(file.FullName + ".out", File.ReadAllText(file.FullName).Wrap(80));
+                File.WriteAllText(file.FullName + ".out", File.ReadAllText(file.FullName).Wrap(lineLength));
             }
         }
     }
